@@ -2,6 +2,7 @@ import torch.nn.functional as F
 from torch import nn
 
 from model.attention.auto_correlation import AutoCorrelation
+from model.attention.flow_attention import FlowAttention
 from model.attention.full_attention import FullAttention
 from model.attention.prob_attention import ProbAttention
 from model.embedding import DataEmbedding
@@ -20,8 +21,11 @@ class DecoderLayer(nn.Module):
         elif attention == 'AutoCorrelation':
             self.self_attention = AutoCorrelation(d_k, d_v, d_model, n_heads, dropout)
             self.cross_attention = AutoCorrelation(d_k, d_v, d_model, n_heads, dropout)
+        elif attention == 'FlowAttention':
+            self.self_attention = FlowAttention(d_k, d_v, d_model, n_heads, dropout)
+            self.cross_attention = FlowAttention(d_k, d_v, d_model, n_heads, dropout)
         else:
-            print('attention must in [FullAttention, ProbAttention, AutoCorrelation]!')
+            print('attention must in [FullAttention, ProbAttention, AutoCorrelation, FlowAttention]!')
 
         self.conv1 = nn.Conv1d(in_channels=d_model, out_channels=d_ff, kernel_size=(1,))
         self.conv2 = nn.Conv1d(in_channels=d_ff, out_channels=d_model, kernel_size=(1,))

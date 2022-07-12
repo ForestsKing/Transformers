@@ -15,7 +15,7 @@ from utils.getdata import get_data
 
 
 class EXP:
-    def __init__(self, attention='FlowAttention', seq_len=96, label_len=48, pred_len=24, lr=0.0001, batch_size=32,
+    def __init__(self, attention='FullAttention', seq_len=96, label_len=48, pred_len=24, lr=0.0001, batch_size=32,
                  epochs=8, patience=5, verbose=True):
         self.attention = attention
         self.seq_len = seq_len

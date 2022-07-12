@@ -16,9 +16,11 @@
 
 - FullAttention([Transformer](https://proceedings.neurips.cc/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf))
   ![](./img/FullAttention.png)
+
 - ProbAttention([Informer](https://arxiv.org/pdf/2012.07436.pdf))
 
 - FlowAttention([Flowformer](https://arxiv.org/pdf/2202.06258.pdf))
   ![](./img/FlowAttention.png)
+
 - AutoCorrelation([Autoformer](https://proceedings.neurips.cc/paper/2021/file/bcc0d400288793e8bdcd7c19a8ac0c2b-Paper.pdf))
   ![](./img/AutoCorrelation.png)

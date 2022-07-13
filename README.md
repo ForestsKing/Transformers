@@ -13,7 +13,7 @@
 | AutoCorrelation | 96->24   | 0.4915 | 0.5217 | 22.9226  |
 | FullAttention   | 672->168 | 1.3690 | 0.8561 | 38.1642  |
 | ProbAttention   | 672->168 | 1.6498 | 0.9177 | 78.7496  |
-| FlowAttention   | 672->168 | 1.1613 | 0.8313 | 140.3401 |
+| FlowAttention   | 672->168 | 1.1613 | 0.8313 | 31.2789  |
 | AutoCorrelation | 672->168 | 1.5117 | 0.9110 | 140.3401 |
 
 ## FullAttention([Transformer](https://proceedings.neurips.cc/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf))
